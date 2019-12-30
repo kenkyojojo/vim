@@ -52,3 +52,10 @@ set noerrorbells
 set t_vb=
 set tm=500
 
+"--------------
+" foldmarker
+"--------------
+" 預設全部關閉
+set foldmarker={{{,}}}
+set foldmethod=marker
+set foldlevel=0 
