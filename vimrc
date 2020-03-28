@@ -35,6 +35,9 @@ set clipboard=unnamed
 set noswapfile
 set hidden
 set nobomb            " no BOM(Byte Order Mark)
+" search down into sufolders
+" Provides tab-completion for all file-related tasks
+set path+=**
 
 "--------------
 " Filetype and Encoding
@@ -44,6 +47,7 @@ filetype indent on
 filetype plugin on
 
 " file encoding
+set fileencodings=utf-8,big5
 set encoding=utf-8
 scriptencoding utf-8
 
@@ -51,4 +55,8 @@ scriptencoding utf-8
 " key mapping
 "--------------
 let mapleader = ","
-
+" use crtl+u ctrl+b to change coding format
+set <C-u>=^U
+set <C-b>=^B
+map <C-u> :set fileencoding=utf8
+map <C-b> :set fileencoding=big5
