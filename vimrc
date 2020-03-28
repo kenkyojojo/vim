@@ -57,6 +57,6 @@ scriptencoding utf-8
 let mapleader = ","
 " use crtl+u ctrl+b to change coding format
 set <C-u>=^U
-set <C-b>=^B
+set <C-I>=^I
 map <C-u> :set fileencoding=utf8
-map <C-b> :set fileencoding=big5
+map <C-i> :set fileencoding=big5
