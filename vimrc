@@ -60,3 +60,40 @@ set <C-u>=^U
 set <C-I>=^I
 map <C-u> :set fileencoding=utf8
 map <C-i> :set fileencoding=big5
+" use List trangs
+nmap  ;l   :call ListTrans_toggle_format()<CR>             
+xmap  ;l   :call ListTrans_toggle_format('visual')<CR>  
+" use vmath
+xmap <silent><expr>  ++  VMATH_YankAndAnalyse() 
+nmap <silent>        ++  vip++
+" Vim global plugin for dragging virtual blocks
+vmap  <expr>  <LEFT>   DVB_Drag('left')
+vmap  <expr>  <RIGHT>  DVB_Drag('right')
+vmap  <expr>  <DOWN>   DVB_Drag('down')
+vmap  <expr>  <UP>     DVB_Drag('up')
+vmap  <expr>  D        DVB_Duplicate()
+
+let g:DVB_TrimWS = 1  
+
+"--------------
+" Function to flash the current match a number of times
+"--------------
+function! HLNext (blink)
+    let [bufnum, lnum, col, off] = getpos('.')
+    let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
+    let target_pat = '\c\%#\%('.@/.'\)'
+    let i = 1
+    while i < a:blink
+        exec 'sleep 50m'
+        let ring = matchadd('Comment', target_pat, 101)
+        redraw
+        exec 'sleep 50m'
+        call matchdelete(ring)
+        redraw
+        let i += 1
+    endwhile
+endfunction
+
+" Rewire n and N to step-and-call-function
+nnoremap <silent> n   n:call HLNext(5)<cr>
+nnoremap <silent> N   N:call HLNext(5)<cr>
