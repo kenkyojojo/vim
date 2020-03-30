@@ -25,6 +25,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-ruby/vim-ruby'
   Plug 'tpope/vim-rails'
   Plug 'thoughtbot/vim-rspec'
+
+ " revers line number 
+  Plug 'jeffkreeftmeijer/vim-numbertoggle'
 call plug#end()
 
 "--------------
@@ -38,6 +41,7 @@ set nobomb            " no BOM(Byte Order Mark)
 " search down into sufolders
 " Provides tab-completion for all file-related tasks
 set path+=**
+set number relativenumber
 
 "--------------
 " Filetype and Encoding
