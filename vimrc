@@ -28,6 +28,9 @@ call plug#begin('~/.vim/plugged')
 
  " revers line number 
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
+ " sdcv to search word in dictionaries
+  Plug 'chusiang/vim-sdcv'
 call plug#end()
 
 "--------------
@@ -42,6 +45,7 @@ set nobomb            " no BOM(Byte Order Mark)
 " Provides tab-completion for all file-related tasks
 set path+=**
 set number relativenumber
+set keywordprg=sdcv
 
 "--------------
 " Filetype and Encoding
@@ -70,6 +74,8 @@ xmap  ;l   :call ListTrans_toggle_format('visual')<CR>
 " use vmath
 xmap <silent><expr>  ++  VMATH_YankAndAnalyse() 
 nmap <silent>        ++  vip++
+" sdcv 
+nmap <leader>w :call SearchWord()<CR>
 " Vim global plugin for dragging virtual blocks
 vmap  <expr>  <LEFT>   DVB_Drag('left')
 vmap  <expr>  <RIGHT>  DVB_Drag('right')
