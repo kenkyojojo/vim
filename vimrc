@@ -31,6 +31,9 @@ call plug#begin('~/.vim/plugged')
 
  " sdcv to search word in dictionaries
   Plug 'chusiang/vim-sdcv'
+
+ " vimwiki
+  Plug 'vimwiki/vimwiki'
 call plug#end()
 
 "--------------
@@ -46,6 +49,7 @@ set nobomb            " no BOM(Byte Order Mark)
 set path+=**
 set number relativenumber
 set keywordprg=sdcv
+syntax on
 
 "--------------
 " Filetype and Encoding
