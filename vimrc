@@ -111,3 +111,5 @@ endfunction
 " Rewire n and N to step-and-call-function
 nnoremap <silent> n   n:call HLNext(5)<cr>
 nnoremap <silent> N   N:call HLNext(5)<cr>
+" Use <C-L> to clear some highlighting
+nnoremap <silent> <C-L> :silent! call matchdelete(b:ring)<CR>:nohlsearch<CR>:set nolist nospell<CR><C-L>
