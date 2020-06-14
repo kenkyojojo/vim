@@ -80,6 +80,8 @@ xmap <silent><expr>  ++  VMATH_YankAndAnalyse()
 nmap <silent>        ++  vip++
 " sdcv 
 nmap <leader>w :call SearchWord()<CR>
+" vimwikicheckbox
+map <Leader>bb <Plug>VimwikiToggleListItem
 " Vim global plugin for dragging virtual blocks
 vmap  <expr>  <LEFT>   DVB_Drag('left')
 vmap  <expr>  <RIGHT>  DVB_Drag('right')
