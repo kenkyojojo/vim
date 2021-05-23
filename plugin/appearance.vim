@@ -21,7 +21,7 @@ set splitright
 "--------------
 " Scroll
 "--------------
-set scrolloff=3
+set scrolloff=0
 
 "--------------
 " Tab and space
