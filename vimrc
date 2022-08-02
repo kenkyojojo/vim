@@ -115,3 +115,15 @@ nnoremap <silent> n   n:call HLNext(5)<cr>
 nnoremap <silent> N   N:call HLNext(5)<cr>
 " Use <C-L> to clear some highlighting
 nnoremap <silent> <C-L> :silent! call matchdelete(b:ring)<CR>:nohlsearch<CR>:set nolist nospell<CR><C-L>
+
+
+"--------------
+" 按 F5 執行當前 Python 程式碼"
+"--------------
+map <F5> :call PRUN()<CR>
+func! PRUN()
+    exec "w"
+    if &filetype == 'python'
+        exec "!python3 %"
+    endif
+endfunc
