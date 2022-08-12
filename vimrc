@@ -124,6 +124,11 @@ map <F5> :call PRUN()<CR>
 func! PRUN()
     exec "w"
     if &filetype == 'python'
+        exec "!clear %"
         exec "!python3 %"
+    endif
+    if &filetype == 'ruby'
+        exec "!clear %"
+        exec "!ruby %"
     endif
 endfunc
