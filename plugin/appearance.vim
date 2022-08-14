@@ -31,6 +31,24 @@ set shiftwidth=2
 set expandtab
 
 "--------------
+" 特殊文件Tab設置
+"--------------
+autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
+autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
+autocmd FileType html,htmldjango,xhtml,haml,jade setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
+autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+
+"--------------
+" 文件類型設置
+"--------------
+" Markdown設置
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+" Markdown折行
+autocmd FileType markdown setlocal wrap
+
+"--------------
 " ColorScheme
 "--------------
 set t_Co=256  " Number of colors

@@ -55,8 +55,8 @@ syntax on
 " Filetype and Encoding
 "--------------
 filetype on
-filetype indent on
-filetype plugin on
+filetype indent on " 自適應不同語言的智能縮進
+filetype plugin on " 開啟文件名探測縮進
 
 " file encoding
 set fileencodings=utf-8,big5
