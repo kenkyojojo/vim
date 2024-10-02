@@ -48,6 +48,7 @@ set nobomb            " no BOM(Byte Order Mark)
 " Provides tab-completion for all file-related tasks
 set path+=**
 set number relativenumber
+" User K to search English Dictionary
 set keywordprg=sdcv
 syntax on
 
