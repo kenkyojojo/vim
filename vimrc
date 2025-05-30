@@ -26,6 +26,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rails'
   Plug 'thoughtbot/vim-rspec'
 
+  " for golang development
+  Plug 'fatih/vim-go'
+
  " revers line number 
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
