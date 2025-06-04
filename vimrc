@@ -37,6 +37,10 @@ call plug#begin('~/.vim/plugged')
 
  " vimwiki
   Plug 'vimwiki/vimwiki'
+
+ " calendar
+  Plug 'mattn/calendar-vim'
+
 call plug#end()
 
 "--------------
